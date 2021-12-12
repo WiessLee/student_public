@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>lr.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>lr.servlet.AdminServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TeaServlet</servlet-name>
+    <servlet-class>lr.servlet.TeaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StuServlet</servlet-name>
+    <servlet-class>lr.servlet.StuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/AdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TeaServlet</servlet-name>
+    <url-pattern>/TeaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StuServlet</servlet-name>
+    <url-pattern>/StuServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>Login.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <display-name>Admin</display-name>
+    <filter-name>Admin</filter-name>
+    <filter-class>lr.filter.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Admin</filter-name>
+    <url-pattern>/Admin</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>Encodeing</display-name>
+    <filter-name>Encodeing</filter-name>
+    <filter-class>lr.filter.Encodeing</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Encodeing</filter-name>
+    <url-pattern>/Encodeing</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>TeacherFilter</display-name>
+    <filter-name>TeacherFilter</filter-name>
+    <filter-class>lr.filter.TeacherFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>TeacherFilter</filter-name>
+    <url-pattern>/TeacherFilter</url-pattern>
+  </filter-mapping>
+  <listener>
+    <listener-class>lr.filter.StudentFilter</listener-class>
+  </listener>
+</web-app>
