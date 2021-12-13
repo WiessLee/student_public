@@ -10,7 +10,7 @@ import java.sql.Statement;
 
 public class UserManager {
 	private String driver="com.mysql.jdbc.Driver";
-	private String url="jdbc:mysql://192.168.111.128:3306/student";
+	private String url="jdbc:mysql://127.0.0.1:3306/student";
 	private String user="root";
 	private String password="root";
 	public UserManager(){}
